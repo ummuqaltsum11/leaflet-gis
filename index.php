@@ -18,7 +18,7 @@
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
 <script>
-    var mymap = L.map('mapid').setView([-5.358079,104.986363], 15);
+    var mymap = L.map('mapid').setView([-5.1305667,105.2359583], 15);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -28,9 +28,9 @@
     accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
 }).addTo(mymap);
 
-var marker = L.marker([-5.358079,104.986363]).addTo(mymap);
+var marker = L.marker([-5.1305667,105.2359583]).addTo(mymap);
 
-var circle = L.circle([-5.367878, 104.984922], {
+var circle = L.circle([-5.125909, 105.216923], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
@@ -38,10 +38,10 @@ var circle = L.circle([-5.367878, 104.984922], {
 }).addTo(mymap);
 
 var polygon = L.polygon([
-    [-5.34912, 104.974236],
-    [-5.345659, 104.985394],
-    [-5.355145, 104.98857],
-    [-5.353692, 104.97355]
+    [-5.128175, 105.225077],
+    [-5.138476, 105.226707],
+    [-5.124627, 105.235634],
+    [-5.122404, 105.226922]
 ]).addTo(mymap);
 
 var popup = L.popup();
@@ -56,8 +56,8 @@ function onMapClick(e) {
 mymap.on('click', onMapClick);
 
 marker.bindPopup("Rumah").openPopup();
-circle.bindPopup("Margkaya");
-polygon.bindPopup("Lapangan");
+circle.bindPopup("Trimurjo");
+polygon.bindPopup("Sawah");
 
 </script>
 
